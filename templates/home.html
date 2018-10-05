@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Home</h1>
+
+    {% if request.user.is_authenticated %}
+        <p>{{ request.user }}</p>
+        {% else %}
+        <p>No encuentra el usuario {{ request.user }}</p>
+    {% endif %}
+{% endblock %}
